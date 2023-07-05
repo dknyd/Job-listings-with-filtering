@@ -1,0 +1,285 @@
+/* ALL VIEW */
+:root {
+	--Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
+	/* (Background) */
+	--Light-Grayish-Cyan1: hsl(180, 52%, 96%);
+	/* (Filter Tablets) */
+	--Light-Grayish-Cyan2: hsl(180, 31%, 95%);
+	--Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+	--Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+}
+
+* {
+	font-family: 'League Spartan', sans-serif;
+	font-size: 15px;
+}
+
+.hidden {
+	position: absolute;
+	visibility: hidden;
+}
+
+.visible {
+	visibility: visible;
+}
+
+html {
+	width: 100vw;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--Light-Grayish-Cyan1);
+	width: 100vw;
+	margin: 0px;
+}
+
+.bgHeader {
+	width: 100%;
+	background-size: cover;
+	height: 5rem;
+	background-color: teal;
+	opacity: 0.5;
+	pointer-events: none;
+	margin-bottom: 4.2rem;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+/***************************/
+/* FILTERING */
+/***************************/
+.filterContainer {
+	height: 4rem;
+	top: 3rem;
+	position: absolute;
+	background-color: white;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.clearButton {
+	color: var(--Desaturated-Dark-Cyan);
+	align-self: center;
+	margin-left: auto;
+	margin-right: 2rem;
+}
+
+.clearButton:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.tagContainer {
+	display: flex;
+	flex-direction: row;
+	background-color: var(--Light-Grayish-Cyan1);
+	margin-left: 1rem;
+	align-items: center;
+	height: 1.5rem;
+	border-radius: 0.1rem;
+	color: var(--Desaturated-Dark-Cyan);
+	padding-left: 0.5rem;
+}
+
+.tagContainerClose {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 10px;
+	height: 1.5rem;
+	color: white;
+	background-color: var(--Desaturated-Dark-Cyan);
+	border-radius: 0.1rem;
+	width: 1.3rem;
+	margin-left: 1rem;
+}
+
+.tagContainerClose:hover {
+	cursor: pointer;
+	background-color: var(--Very-Dark-Grayish-Cyan);
+}
+
+/***************************/
+/* GENERAL ELEMENTS  */
+/***************************/
+.item {
+	display: flex;
+	margin-bottom: 2rem;
+	background-color: white;
+	border-radius: 0.4rem;
+	box-shadow: 5px;
+}
+
+.item1,
+.item2 {
+	border-left: 5px solid var(--Desaturated-Dark-Cyan);
+	;
+}
+
+.containerBottom {
+	display: flex;
+}
+
+.infoLine1,
+.infoLine3,
+.companyTag {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.companyName {
+	color: var(--Desaturated-Dark-Cyan);
+	font-weight: 700;
+}
+
+.tagNew {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	background-color: var(--Desaturated-Dark-Cyan);
+	padding: 0.2rem;
+	border-radius: 0.9rem;
+	height: 0.9rem;
+	width: 2.5rem;
+	margin-left: 1rem;
+	font-size: 0.8rem;
+	padding-top: 0.4rem;
+}
+
+.tagFeatured {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	background-color: var(--Very-Dark-Grayish-Cyan);
+	padding: 0.2rem;
+	border-radius: 0.9rem;
+	height: 1rem;
+	width: 4.3rem;
+	margin-left: 0.9rem;
+	font-size: 0.8rem;
+	padding-top: 0.4rem;
+}
+
+.infoLine2 {
+	color: var(--Very-Dark-Grayish-Cyan);
+	font-weight: 700;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.infoLine2:hover {
+	cursor: pointer;
+	color: var(--Desaturated-Dark-Cyan);
+}
+
+.infoLine3 {
+	color: var(--Dark-Grayish-Cyan);
+	display: flex;
+}
+
+.tag {
+	align-self: center;
+	font-weight: 700;
+	color: var(--Desaturated-Dark-Cyan);
+	background-color: var(--Light-Grayish-Cyan2);
+	height: 1.1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 1rem;
+	padding: 0.4rem;
+	border-radius: 0.3rem;
+}
+
+.tag:hover {
+	cursor: pointer;
+	color: white;
+	background-color: var(--Desaturated-Dark-Cyan);
+}
+
+/***************************/
+/* MOBILE VIEW */
+/***************************/
+@media screen and (max-width: 849px) {
+
+	.filterContainer {
+		width: 20rem;
+		flex-wrap: wrap;
+	}
+
+	.item {
+		flex-direction: column;
+		width: 18rem;
+		padding: 1rem;
+	}
+
+	.containerTop {
+		position: relative;
+		bottom: 2rem;
+		left: 1rem;
+		display: inline;
+	}
+
+	.containerBottom {
+		display: flex;
+		flex-flow: wrap;
+	}
+
+	img {
+		width: 3rem;
+		height: 3rem;
+	}
+
+	hr {
+		border: none;
+		border-top: 1px solid var(--Very-Dark-Grayish-Cyan);
+		margin: 10px 0px;
+	}
+
+	.tag {
+		margin-top: 1rem;
+	}
+
+}
+
+/***************************/
+/* DESKTOP VIEW */
+/***************************/
+@media screen and (min-width: 850px) {
+	.filterContainer {
+		width: 54rem;
+	}
+
+	.item {
+		width: 50rem;
+		padding: 2rem;
+		height: 4.5rem;
+		align-items: center;
+	}
+
+	.containerTop {
+		margin-right: 2rem;
+	}
+
+	.containerMid {
+		width: 25rem;
+	}
+
+	hr {
+		position: absolute;
+		visibility: hidden;
+	}
+
+	.containerBottom {
+		width: 100%;
+		justify-content: flex-end;
+	}
+}
